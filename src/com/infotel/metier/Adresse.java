@@ -20,6 +20,7 @@ public class Adresse {
 	private String nomRue;
 	private String cp;
 	private String ville;
+	//ma Classe Adresse
 	
 	@OneToMany(mappedBy = "adresse")
 	private List<Personne> personnes = new ArrayList<Personne>(); 
@@ -75,6 +76,8 @@ public class Adresse {
 		for (Personne p : personnes) {
 			p.setAdresse(null);
 		}
+	
+	
 	}
 
 }
